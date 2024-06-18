@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price House Prediction</title>
+    <link rel="stylesheet" type="text/css" href="/SignInSignUpPage.css">
+</head>
+<body>
+<div class="background"></div>
+
+<div class="form-container">
+    <div id="error-container"></div>
+    <form action="/signin" method="post">
+        <label for="signin-username">Username:</label>
+        <input type="text" id="signin-username" name="username" required>
+        <label for="signin-password">Password:</label>
+        <input type="password" id="signin-password" name="password" required>
+        <button type="submit" id="signInButton">Sign In</button>
+
+        <hr class="separator">
+
+        <button type="button" id="createAccountButton" onclick="location.href='/signup'">Create Account</button>
+    </form>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const queryParams = new URLSearchParams(window.location.search);
+    const error = queryParams.get('error');
+    if (error) {
+        const errorMessage = document.createElement('p');
+        errorMessage.textContent = error;
+        document.getElementById('error-container').appendChild(errorMessage);
+    }
+});
+</script>
+
+</body>
+</html>

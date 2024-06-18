@@ -1,0 +1,56 @@
+body {
+    background-image: url('SignInSignUpPage.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 450px;
+}
+
+p{
+    text-align: center;
+    color: #FF0000;
+    font-weight: 500;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+.form-container {
+    position: relative;
+}
+
+#createAccountButton {
+    margin-top: 10px;
+    border-top: 3px solid #dadde1;
+}
